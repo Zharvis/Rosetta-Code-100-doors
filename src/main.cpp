@@ -18,7 +18,7 @@ Answer the question:   what state are the doors in after the last pass?   Which 
 
 int main()
 {
-    const int doorNumber = 100;
+    const int doorNumber = 101;
     bool doors[doorNumber];
     for (int i = 0; i < doorNumber; i++)
     {
@@ -27,7 +27,12 @@ int main()
 
     for (int i = 0; i < doorNumber; i++)
     {
-        doors[i] = doors[i] ? false : true;
+        
+        for (int j = 0; j < doorNumber; j = j +i +1)
+        {
+            doors[j] = doors[j] ? false : true;
+        }
+        
     }
 
     for (int i = 0; i < doorNumber; i++)
