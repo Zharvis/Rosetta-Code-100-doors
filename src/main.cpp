@@ -13,18 +13,18 @@ http://rosettacode.org/wiki/100_doors
 
 int main()
 {
-    const int doorNumber = 100;
-    bool is_open[doorNumber] = {false};
+    const int num_doors = 100;
+    bool is_open[num_doors] = {false};
 
-    for (int i = 0; i < doorNumber; i++)
+    for (int i = 0; i < num_doors; i++)
     {    
-        for (int j = i; j < doorNumber; j += i+1)
+        for (int j = i; j < num_doors; j += i+1)
         {
             is_open[j] = is_open[j] ? false : true;
         }   
     }
 
-    for (int i = 0; i < doorNumber; i++)
+    for (int i = 0; i < num_doors; i++)
     {
         if(is_open[i])
         {
